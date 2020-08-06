@@ -1,4 +1,4 @@
-module github.com/instaclustr/cassandra-sidecar-go-client
+module github.com/erdrix/cassandra-sidecar-go-client
 
 go 1.13
 
