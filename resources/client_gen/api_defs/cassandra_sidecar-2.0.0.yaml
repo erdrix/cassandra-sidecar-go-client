@@ -512,6 +512,10 @@ components:
           type: boolean
           description: |
             a flag saying if we should restore system keyspaces as well, relevant only for IN_PLACE restoration
+        resolveHostIdFromTopology:
+          type: boolean
+          description: >
+            If set, restoration process will translate nodeId in storage location to hostname in topology file uploaded to remote bucket upon backup based on snapshot name and schema version.
         snapshotTag:
           type: string
           description: |
@@ -916,4 +920,3 @@ components:
       properties:
         exception:
           type: object
-

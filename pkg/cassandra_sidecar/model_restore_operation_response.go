@@ -24,6 +24,8 @@ type RestoreOperationResponse struct {
 	CassandraConfigDirectory string `json:"cassandraConfigDirectory,omitempty"`
 	// a flag saying if we should restore system keyspaces as well, relevant only for IN_PLACE restoration 
 	RestoreSystemKeyspace bool `json:"restoreSystemKeyspace,omitempty"`
+	// If set, restoration process will translate nodeId in storage location to hostname in topology file uploaded to remote bucket upon backup based on snapshot name and schema version. 
+	ResolveHostIdFromTopology bool `json:"resolveHostIdFromTopology,omitempty"`
 	// name of snapshot to restore 
 	SnapshotTag string `json:"snapshotTag"`
 	// similar to field in backup request, when empty, all entities in given snapshot will be restored 

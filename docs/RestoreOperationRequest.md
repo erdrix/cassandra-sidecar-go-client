@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **CassandraDirectory** | **string** | similar to field in backup request  | [optional] [default to null]
 **CassandraConfigDirectory** | **string** | directory where one expects to find &#x27;conf/cassandra.yaml&#x27; file in case we need to update it with initial tokens in case restoration strategy is IN_PLACE.  | [optional] [default to null]
 **RestoreSystemKeyspace** | **bool** | a flag saying if we should restore system keyspaces as well, relevant only for IN_PLACE restoration  | [optional] [default to null]
+**ResolveHostIdFromTopology** | **bool** | If set, restoration process will translate nodeId in storage location to hostname in topology file uploaded to remote bucket upon backup based on snapshot name and schema version.  | [optional] [default to null]
 **SnapshotTag** | **string** | name of snapshot to restore  | [default to null]
 **Entities** | **string** | similar to field in backup request, when empty, all entities in given snapshot will be restored  | [optional] [default to null]
 **UpdateCassandraYaml** | **bool** | flag telling if cassandra.yaml should be updated with initial_tokens, relevant only in case of IN_PLACE strategy  | [optional] [default to null]
